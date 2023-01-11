@@ -10,9 +10,12 @@ type Props = {
 const NavItem = ({ to, icon, text }: Props) => {
   return (
     <li>
-      <NavLink to={to} className="bg-red-300">
+      <NavLink
+        to={to}
+        className="bg-grey flex items-center justify-center text-sm"
+      >
         {icon}
-        <h4 className="text-red-400">{text}</h4>
+        <h4 className="text-white">{text}</h4>
       </NavLink>
     </li>
   );

@@ -11,11 +11,29 @@ const links = [
     icon: <CgFeed />,
     text: "Feed",
   },
+  {
+    id: 2,
+    to: "/feed",
+    icon: <CgFeed />,
+    text: "Feed",
+  },
+  {
+    id: 3,
+    to: "/feed",
+    icon: <CgFeed />,
+    text: "Feed",
+  },
+  {
+    id: 4,
+    to: "/feed",
+    icon: <CgFeed />,
+    text: "Feed",
+  },
 ];
 
 const NavLinks = (props: Props) => {
   return (
-    <ul>
+    <ul className="flex justify-between px-3 py-2">
       {links.map((link) => (
         <NavItem key={link.id} to={link.to} icon={link.icon} text={link.text} />
       ))}

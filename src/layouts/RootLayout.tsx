@@ -1,3 +1,4 @@
+import MobileNav from "@/features/navigation/MobileNav";
 import Navbar from "@/features/navigation/Navbar";
 import { Outlet } from "react-router-dom";
 
@@ -8,7 +9,8 @@ type Props = {
 const RootLayout = ({ className }: Props) => {
   return (
     <div className={className}>
-      <Navbar />
+      {/* <Navbar /> */}
+      <MobileNav />
       <Outlet />
     </div>
   );
