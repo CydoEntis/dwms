@@ -1,10 +1,25 @@
-import { useState } from "react";
+import Navbar from "./features/navigation/Navbar";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Feed from "./pages/feed/Feed";
+import RootLayout from "./layouts/RootLayout";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootLayout />,
+      children: [
+        {
+          path: "/feed",
+          element: <Feed />,
+        },
+      ],
+    },
+  ]);
+
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <RouterProvider router={router} />
     </div>
   );
 }

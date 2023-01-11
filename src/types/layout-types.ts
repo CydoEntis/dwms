@@ -1,6 +1,6 @@
 import React from "react";
 
 export type LayoutProps = {
-  className: string;
+  className?: string;
   children: React.ReactNode;
 };
