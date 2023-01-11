@@ -1,15 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { CgFeed } from "react-icons/cg";
 
-type Props = {};
+type Props = {
+  to: string;
+  icon: React.ReactNode;
+  text: string;
+};
 
-const NavItem = (props: Props) => {
+const NavItem = ({ to, icon, text }: Props) => {
   return (
     <li>
-      <NavLink to="/feed">
-        <CgFeed />
-        <h4>Feed</h4>
+      <NavLink to={to} className="bg-red-300">
+        {icon}
+        <h4 className="text-red-400">{text}</h4>
       </NavLink>
     </li>
   );
