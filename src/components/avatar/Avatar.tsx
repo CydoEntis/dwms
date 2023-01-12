@@ -6,7 +6,13 @@ type AvatarProps = {
 };
 
 const Avatar = ({ className, src }: AvatarProps) => {
-  return <img className={className} src={src} alt="" />;
+  return (
+    <img
+      className={`${className} h-full w-full rounded-full`}
+      src={src}
+      alt=""
+    />
+  );
 };
 
 export default Avatar;
