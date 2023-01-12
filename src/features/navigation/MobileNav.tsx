@@ -6,14 +6,17 @@ type Props = {};
 
 const MobileNav = (props: Props) => {
   return (
-    <nav className="fixed z-40 flex h-screen w-full flex-col justify-between bg-white">
-      <div className="mt-5 flex flex-col items-center justify-center p-3">
+    <nav className="fixed z-40 flex h-screen w-full flex-col justify-between  bg-cream-50">
+      <div className="mx-auto mt-5 flex w-3/4 flex-col items-center justify-center border-b border-green-50 p-3">
         <img
           className="h-20 w-20 rounded-full"
           src="https://randomuser.me/api/portraits/men/8.jpg"
           alt=""
         />
-        <p className="text-grey-50">Rating: 224</p>
+        <div className="mt-2 flex flex-col items-center justify-center">
+          <p className="text-xs">Rating</p>
+          <h4 className="-m-2 text-[2rem] text-grey-50">224</h4>
+        </div>
       </div>
       <NavLinks />
       <button

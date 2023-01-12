@@ -19,10 +19,10 @@ const NavItem = ({ to, icon, text }: Props) => {
         }
       >
         <div className="relative flex w-full items-center justify-center ">
-          <div className="absolute -top-4 -left-0 h-32 w-32  rotate-12 opacity-60">
+          <div className="absolute -top-2 -left-0 h-32 w-32  rotate-12 opacity-60">
             {icon}
           </div>
-          <h4 className="ml-20 w-1/2  text-[2rem]">{text}</h4>
+          <h4 className="ml-20 w-1/2 text-2xl">{text}</h4>
         </div>
       </NavLink>
     </li>
