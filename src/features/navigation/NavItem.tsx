@@ -9,14 +9,20 @@ type Props = {
 
 const NavItem = ({ to, icon, text }: Props) => {
   return (
-    <li className="mb-3 flex w-2/3 items-center justify-center rounded-md border-2 border-emerald-600 py-1.5">
+    <li className="relative mb-3 flex h-20 w-full items-center justify-center overflow-hidden rounded-md drop-shadow-xl">
       <NavLink
         to={to}
-        className="flex w-full items-center justify-center text-sm text-grey-50"
+        className={({ isActive }) =>
+          isActive
+            ? "relative flex h-full w-full items-center justify-center bg-green-50 py-1.5 text-sm text-white"
+            : "relative flex h-full w-full items-center justify-center bg-off-white py-1.5 text-sm text-grey-50 opacity-80"
+        }
       >
-        <div className="flex w-3/4 items-center justify-center ">
-          <div className="w-1/3">{icon}</div>
-          <h4 className="w-1/3 text-lg">{text}</h4>
+        <div className="relative flex w-full items-center justify-center ">
+          <div className="absolute -top-6 -left-0 h-32 w-32  rotate-12 opacity-70">
+            {icon}
+          </div>
+          <h4 className="ml-20 w-1/2  text-[2.5rem]">{text}</h4>
         </div>
       </NavLink>
     </li>

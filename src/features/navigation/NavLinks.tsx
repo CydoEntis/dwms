@@ -10,32 +10,32 @@ const links = [
   {
     id: 1,
     to: "/feed",
-    icon: <CgFeed className="mr-2 h-8 w-8" />,
+    icon: <CgFeed className="h-20 w-20" />,
     text: "Feed",
   },
   {
     id: 2,
-    to: "/feed",
-    icon: <MdGolfCourse className="mr-2 h-8  w-8" />,
-    text: "Games",
+    to: "/matches",
+    icon: <MdGolfCourse className="h-20 w-20" />,
+    text: "Matches",
   },
   {
     id: 3,
     to: "/messages",
-    icon: <FiMessageSquare className="mr-2 h-8  w-8" />,
+    icon: <FiMessageSquare className="h-20 w-20" />,
     text: "Messages",
   },
   {
     id: 4,
     to: "/settings",
-    icon: <MdSettings className="mr-2 h-8  w-8" />,
+    icon: <MdSettings className="h-20 w-20" />,
     text: "Settings",
   },
 ];
 
 const NavLinks = (props: Props) => {
   return (
-    <ul className="mx-auto flex flex-col items-center justify-between border-2 border-orange-400 px-3 py-2">
+    <ul className="w-fullflex flex-col items-center justify-between border-2 border-orange-400 px-3 py-2">
       {links.map((link) => (
         <NavItem key={link.id} to={link.to} icon={link.icon} text={link.text} />
       ))}
