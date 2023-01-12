@@ -5,7 +5,7 @@ type Props = {};
 
 const MobileNav = (props: Props) => {
   return (
-    <nav className="fixed bottom-0  w-full bg-green-50">
+    <nav className="fixed h-screen w-full bg-white">
       <NavLinks />
     </nav>
   );
