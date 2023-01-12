@@ -1,15 +1,28 @@
-import React from "react";
 import NavLinks from "./NavLinks";
 import { FaPowerOff } from "react-icons/fa";
 import Avatar from "@/components/avatar/Avatar";
 import AvatarContainer from "@/components/avatar/AvatarContainer";
 import Rating from "@/components/rating/Rating";
+import { motion } from "framer-motion";
 
-type Props = {};
+type Props = {
+  isOpen: boolean;
+};
 
-const MobileNav = (props: Props) => {
+const variants = {
+  open: { width: "100vw", opacity: 1, x: 0 },
+  closed: { width: 0, opacity: 1, x: 1000 },
+};
+
+const MobileNav = ({ isOpen }: Props) => {
+  console.log(isOpen);
   return (
-    <nav className="fixed z-30 flex h-screen w-full flex-col justify-between bg-cream-50">
+    <motion.nav
+      initial={false}
+      animate={isOpen ? "open" : "closed"}
+      variants={variants}
+      className="fixed z-30 flex h-screen flex-col justify-between bg-cream-50 lg:hidden"
+    >
       <div className="mx-auto mt-5 flex w-3/4 flex-col items-center justify-center border-b border-green-50 p-3">
         <AvatarContainer className="h-24 w-24 rounded-full border-4 border-yellow-50">
           <Avatar src="https://randomuser.me/api/portraits/men/8.jpg" />
@@ -25,7 +38,7 @@ const MobileNav = (props: Props) => {
         <FaPowerOff className="mr-2" />
         Log out
       </button>
-    </nav>
+    </motion.nav>
   );
 };
 

@@ -1,10 +1,22 @@
-import React from "react";
 import NavItem from "./NavItem";
 import { CgFeed } from "react-icons/cg";
 import { MdSettings, MdGolfCourse } from "react-icons/md";
 import { FiMessageSquare } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 type Props = {};
+
+const variants = {
+  open: {
+    transition: {
+      staggerChildren: 0.07,
+      delayChildren: 0.3,
+    },
+  },
+  closed: {
+    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+  },
+};
 
 const links = [
   {
@@ -35,11 +47,14 @@ const links = [
 
 const NavLinks = (props: Props) => {
   return (
-    <ul className="mx-auto flex w-5/6 flex-col items-center justify-between px-3 py-2">
+    <motion.ul
+      variants={variants}
+      className="mx-auto flex w-5/6 flex-col items-center justify-between px-3 py-2"
+    >
       {links.map((link) => (
         <NavItem key={link.id} to={link.to} icon={link.icon} text={link.text} />
       ))}
-    </ul>
+    </motion.ul>
   );
 };
 

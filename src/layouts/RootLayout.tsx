@@ -18,7 +18,7 @@ const RootLayout = ({ className }: Props) => {
   return (
     <div className={className}>
       {/* <Navbar /> */}
-      {isOpen && <MobileNav />}
+      <MobileNav isOpen={isOpen} />
       <NavToggle toggleHandler={toggleHandler} isOpen={isOpen} />
       <Outlet />
     </div>

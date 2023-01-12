@@ -1,5 +1,23 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { NavLink } from "react-router-dom";
+
+const variants = {
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 },
+    },
+  },
+  closed: {
+    y: 50,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 },
+    },
+  },
+};
 
 type Props = {
   to: string;
@@ -9,7 +27,12 @@ type Props = {
 
 const NavItem = ({ to, icon, text }: Props) => {
   return (
-    <li className="relative mb-3 flex h-16  w-full items-center justify-center overflow-hidden rounded-md drop-shadow-xl">
+    <motion.li
+      variants={variants}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+      className="relative mb-3 flex h-16  w-full items-center justify-center overflow-hidden rounded-md drop-shadow-xl"
+    >
       <NavLink
         to={to}
         className={({ isActive }) =>
@@ -25,7 +48,7 @@ const NavItem = ({ to, icon, text }: Props) => {
           <h4 className="ml-20 w-1/2 font-fredoka text-2xl">{text}</h4>
         </div>
       </NavLink>
-    </li>
+    </motion.li>
   );
 };
 
