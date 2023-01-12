@@ -27,6 +27,10 @@ module.exports = {
 
         "black-50": "#252C2E",
       },
+      fontFamily: {
+        fredoka: ["Fredoka One", 'cursive'],
+        montserrat: ["Montserrat", 'sans-serif'],
+      },
     },
   },
   plugins: [],

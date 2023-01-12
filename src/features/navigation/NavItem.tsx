@@ -22,7 +22,7 @@ const NavItem = ({ to, icon, text }: Props) => {
           <div className="absolute -top-2 -left-0 h-32 w-32  rotate-12 opacity-60">
             {icon}
           </div>
-          <h4 className="ml-20 w-1/2 text-2xl">{text}</h4>
+          <h4 className="ml-20 w-1/2 font-fredoka text-2xl">{text}</h4>
         </div>
       </NavLink>
     </li>
