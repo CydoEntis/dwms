@@ -1,5 +1,3 @@
-import React from "react";
-
 type AvatarProps = {
   className?: string;
   src: string;

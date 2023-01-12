@@ -4,6 +4,7 @@ import Avatar from "@/components/avatar/Avatar";
 import AvatarContainer from "@/components/avatar/AvatarContainer";
 import Rating from "@/components/rating/Rating";
 import { motion } from "framer-motion";
+import NavAction from "./NavAction";
 
 type Props = {
   isOpen: boolean;
@@ -23,21 +24,20 @@ const MobileNav = ({ isOpen }: Props) => {
       variants={variants}
       className="fixed z-30 flex h-screen flex-col justify-between bg-cream-50 lg:hidden"
     >
-      <div className="mx-auto mt-5 flex w-3/4 flex-col items-center justify-center border-b border-green-50 p-3">
+      <motion.div className="mx-auto mt-5 flex w-3/4 flex-col items-center justify-center border-b border-green-50 p-3">
         <AvatarContainer className="h-24 w-24 rounded-full border-4 border-yellow-50">
           <Avatar src="https://randomuser.me/api/portraits/men/8.jpg" />
         </AvatarContainer>
 
         <Rating rating={224} />
-      </div>
+      </motion.div>
       <NavLinks />
-      <button
-        type="button"
-        className="mx-auto mb-5 flex items-center justify-center py-3 font-fredoka text-2xl text-grey-30 transition duration-200 ease-in-out hover:text-red-50"
-      >
-        <FaPowerOff className="mr-2" />
-        Log out
-      </button>
+      <NavAction
+        className="mx-auto mb-5 py-3 hover:text-red-50"
+        onClick={() => console.log("Log out")}
+        text="Log out"
+        icon={<FaPowerOff className="mr-2" />}
+      />
     </motion.nav>
   );
 };
