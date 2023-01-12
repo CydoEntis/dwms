@@ -3,6 +3,7 @@ import NavLinks from "./NavLinks";
 import { FaPowerOff } from "react-icons/fa";
 import Avatar from "@/components/avatar/Avatar";
 import AvatarContainer from "@/components/avatar/AvatarContainer";
+import Rating from "@/components/rating/Rating";
 
 type Props = {};
 
@@ -14,15 +15,12 @@ const MobileNav = (props: Props) => {
           <Avatar src="https://randomuser.me/api/portraits/men/8.jpg" />
         </AvatarContainer>
 
-        <div className="mt-2 flex flex-col items-center justify-center">
-          <p className="font-fredoka text-xs text-grey-50">Rating</p>
-          <h4 className="-m-2 font-fredoka  text-[2rem] text-grey-50">224</h4>
-        </div>
+        <Rating rating={224} />
       </div>
       <NavLinks />
       <button
         type="button"
-        className="mx-auto mb-5 flex items-center justify-center py-3 font-fredoka text-2xl text-grey-50 transition duration-200 ease-in-out hover:text-green-50"
+        className="mx-auto mb-5 flex items-center justify-center py-3 font-fredoka text-2xl text-grey-30 transition duration-200 ease-in-out hover:text-red-50"
       >
         <FaPowerOff className="mr-2" />
         Log out
