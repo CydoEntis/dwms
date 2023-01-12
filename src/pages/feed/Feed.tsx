@@ -1,9 +1,25 @@
+import Feedcard from "@/components/FeedCard/Feedcard";
 import React from "react";
+import image from "../../assets/ball.jpg"
 
-type Props = {};
+type Props = {
+
+};
 
 const Feed = (props: Props) => {
-  return <div>Feed</div>;
+  return (
+
+    <div className="flex flex-col gap-y-8 p-3 mt-12">
+      <Feedcard
+        src={image}
+        title={"This is the card Title"}
+        games={12}
+        groups={27}
+        rating={5}
+      />
+    </div>
+
+  );
 };
 
 export default Feed;
