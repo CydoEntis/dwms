@@ -9,7 +9,7 @@ type Props = {};
 
 const MobileNav = (props: Props) => {
   return (
-    <nav className="fixed z-40 flex h-screen w-full flex-col justify-between bg-cream-50">
+    <nav className="fixed z-30 flex h-screen w-full flex-col justify-between bg-cream-50">
       <div className="mx-auto mt-5 flex w-3/4 flex-col items-center justify-center border-b border-green-50 p-3">
         <AvatarContainer className="h-24 w-24 rounded-full border-4 border-yellow-50">
           <Avatar src="https://randomuser.me/api/portraits/men/8.jpg" />
