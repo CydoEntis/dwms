@@ -6,15 +6,16 @@ type Props = {};
 
 const Feed = (props: Props) => {
   return (
-    <div className="flex flex-col gap-y-8 p-3">
-      <Feedcard
-        src={image}
-        title={"This is the card Title"}
-        games={12}
-        groups={27}
-        rating={5}
-      />
-    </div>
+    <h1>Hello world</h1>
+    // <div className="flex flex-col gap-y-8 p-3">
+    //   <Feedcard
+    //     src={image}
+    //     title={"This is the card Title"}
+    //     games={12}
+    //     groups={27}
+    //     rating={5}
+    //   />
+    // </div>
   );
 };
 
