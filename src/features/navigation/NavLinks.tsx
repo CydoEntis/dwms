@@ -49,7 +49,7 @@ const NavLinks = (props: Props) => {
   return (
     <motion.ul
       variants={variants}
-      className="mx-auto flex w-5/6 flex-col items-center justify-between px-3 py-2"
+      className="mx-auto flex w-11/12 flex-col items-center justify-between px-3 py-2"
     >
       {links.map((link) => (
         <NavItem key={link.id} to={link.to} icon={link.icon} text={link.text} />

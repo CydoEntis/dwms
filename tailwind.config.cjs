@@ -14,6 +14,8 @@ module.exports = {
 
         "green-50": "#22C17B",
         "green-70": "#17B55B",
+        "green-80": "#118943",
+        "green-90": "#0D6833",
 
         "yellow-50": "#FFA848",
 
@@ -29,8 +31,8 @@ module.exports = {
         "black-50": "#252C2E",
       },
       fontFamily: {
-        fredoka: ["Fredoka One", 'cursive'],
-        montserrat: ["Montserrat", 'sans-serif'],
+        fredoka: ["Fredoka One", "cursive"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
     },
   },

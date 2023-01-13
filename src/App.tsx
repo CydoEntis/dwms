@@ -10,7 +10,7 @@ function App() {
       element: <RootLayout />,
       children: [
         {
-          path: "feed", // Eventually Change to /feed route.
+          path: "/feed", // Eventually Change to /feed route.
           element: <Feed />,
         },
       ],
