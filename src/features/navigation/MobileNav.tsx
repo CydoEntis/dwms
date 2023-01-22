@@ -1,10 +1,10 @@
-import NavLinks from "./NavLinks";
-import { FaPowerOff } from "react-icons/fa";
 import Avatar from "@/components/avatar/Avatar";
 import AvatarContainer from "@/components/avatar/AvatarContainer";
+import { FaPowerOff } from "react-icons/fa";
+import NavAction from "./NavAction";
+import NavLinks from "./NavLinks";
 import Rating from "@/components/rating/Rating";
 import { motion } from "framer-motion";
-import NavAction from "./NavAction";
 
 type Props = {
   isOpen: boolean;
@@ -25,8 +25,15 @@ const MobileNav = ({ isOpen }: Props) => {
       className="fixed z-30 flex h-screen flex-col justify-between bg-cream-50 lg:hidden"
     >
       <motion.div className="mx-auto mt-5 flex w-3/4 flex-col items-center justify-center border-b border-green-50 p-3">
-        <AvatarContainer className="h-24 w-24 rounded-full border-4 border-yellow-50">
-          <Avatar src="https://randomuser.me/api/portraits/men/8.jpg" />
+        <AvatarContainer
+          rating={200}
+          iconClasses="h-10 w-10 -top-6 -left-6"
+          className="h-24 w-24 rounded-full border-4 border-yellow-50"
+        >
+          <Avatar
+            className="h-full w-full"
+            src="https://randomuser.me/api/portraits/men/8.jpg"
+          />
         </AvatarContainer>
 
         <Rating rating={224} />

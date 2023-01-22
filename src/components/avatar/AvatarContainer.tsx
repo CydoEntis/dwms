@@ -1,10 +1,12 @@
-import React from "react";
 import { FaCrown } from "react-icons/fa";
+import React from "react";
 import { motion } from "framer-motion";
 
 type Props = {
   className?: string;
+  iconClasses?: string;
   children: React.ReactNode;
+  rating: number;
 };
 
 const variants = {
@@ -26,10 +28,21 @@ const variants = {
   },
 };
 
-const AvatarContainer = ({ className, children }: Props) => {
+const AvatarContainer = ({
+  className,
+  iconClasses,
+  children,
+  rating,
+}: Props) => {
+  let ratingClass = "";
+  if (rating >= 200) {
+    ratingClass = "text-yellow-50";
+  }
   return (
     <motion.div variants={variants} className={`${className} relative`}>
-      <FaCrown className="absolute -top-6 -left-6 h-10 w-10 -rotate-45 text-yellow-50" />
+      <FaCrown
+        className={`absolute ${iconClasses} -rotate-45 ${ratingClass}`}
+      />
       {children}
     </motion.div>
   );
