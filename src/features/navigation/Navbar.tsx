@@ -3,10 +3,13 @@ import NavLinks from "./NavLinks";
 import Foresome from "@/assets/logo.png";
 import NavAction from "./NavAction";
 import { FaPowerOff } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
+  const navigate = useNavigate()
+
   return (
     <nav className="fixed hidden h-screen flex-col justify-between   bg-white lg:flex lg:w-80">
       <div>
@@ -15,7 +18,7 @@ const Navbar = (props: Props) => {
       </div>
       <NavAction
         className="mx-auto mb-5 py-3 hover:text-red-50"
-        onClick={() => console.log("Log out")}
+        onClick={() => {navigate("/auth")}}
         text="Log out"
         icon={<FaPowerOff className="mr-2" />}
       />

@@ -2,8 +2,11 @@ import Navbar from "./features/navigation/Navbar";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Feed from "./pages/feed/Feed";
 import RootLayout from "./layouts/RootLayout";
+import Authentication from "./pages/authentication/Authentication";
+import { useState } from "react";
 
 function App() {
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -14,7 +17,12 @@ function App() {
           element: <Feed />,
         },
       ],
+    
     },
+    {
+      path: "/auth",
+      element: <Authentication />
+    }
   ]);
 
   return (
