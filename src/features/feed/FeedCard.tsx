@@ -14,6 +14,7 @@ import Button from "@/components/buttons/Button";
 import Card from "@/layouts/Card";
 import { HiOutlineCalendar } from "react-icons/hi2";
 import { MdGolfCourse } from "react-icons/md";
+import Rating from "@/components/rating/Rating";
 import React from "react";
 
 type Props = {};
@@ -21,16 +22,19 @@ type Props = {};
 const FeedCard = (props: Props) => (
   <Card className="relative flex w-full items-center justify-between py-3 px-3 drop-shadow-lg">
     {/* <MdGolfCourse className="h-16 w-16" /> */}
-    <AvatarContainer
-      rating={200}
-      iconClasses="h-5 w-5 -top-3.5 -left-3.5"
-      className="rounded-full border-4 border-yellow-50"
-    >
-      <Avatar
-        className="h-12 w-12"
-        src="https://www.fakepersongenerator.com/Face/male/male20151086177407532.jpg"
-      />
-    </AvatarContainer>
+    <div>
+      <AvatarContainer
+        rating={200}
+        iconClasses="h-5 w-5 -top-3.5 -left-3.5"
+        className="rounded-full border-4 border-yellow-50"
+      >
+        <Avatar
+          className="h-12 w-12"
+          src="https://www.fakepersongenerator.com/Face/male/male20151086177407532.jpg"
+        />
+      </AvatarContainer>
+      <Rating rating={224} />
+    </div>
     <div>
       <h1 className="text-md text-grey-70">Jordan's Golf Meet Up</h1>
       <div className="flex justify-between">

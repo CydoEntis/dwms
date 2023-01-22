@@ -36,7 +36,11 @@ const MobileNav = ({ isOpen }: Props) => {
           />
         </AvatarContainer>
 
-        <Rating rating={224} />
+        <Rating
+          iconClasses="mr-1 h-7 w-7"
+          textClasses="font-fredoka  text-2xl "
+          rating={224}
+        />
       </motion.div>
       <NavLinks />
       <NavAction
