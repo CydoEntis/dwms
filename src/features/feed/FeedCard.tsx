@@ -19,7 +19,7 @@ import React from "react";
 type Props = {};
 
 const FeedCard = (props: Props) => (
-  <Card className="relative mt-20 flex w-full items-center justify-between py-3 px-3 drop-shadow-lg">
+  <Card className="relative flex w-full items-center justify-between py-3 px-3 drop-shadow-lg">
     {/* <MdGolfCourse className="h-16 w-16" /> */}
     <AvatarContainer
       rating={200}
@@ -51,7 +51,6 @@ const FeedCard = (props: Props) => (
       </h3>
       <button className="relative flex items-center justify-center rounded-xl bg-green-90 px-3  py-1.5 text-xs text-white opacity-90 transition duration-200 ease-in-out hover:bg-green-80 hover:text-white">
         <h4 className="text-mdfont-fredoka">Join</h4>
-        {/* </div> */}
       </button>
     </div>
 
