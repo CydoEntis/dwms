@@ -21,19 +21,14 @@ type Props = {};
 
 const FeedCard = (props: Props) => (
   <Card className="relative flex w-full items-center justify-between py-3 px-3 drop-shadow-lg">
-    {/* <MdGolfCourse className="h-16 w-16" /> */}
-    <div>
-      <AvatarContainer
-        rating={200}
-        iconClasses="h-5 w-5 -top-3.5 -left-3.5"
-        className="rounded-full border-4 border-yellow-50"
-      >
+    <div className="flex flex-col items-center justify-center">
+      <AvatarContainer rating={200} iconClasses="h-5 w-5 -top-2 -left-3">
         <Avatar
-          className="h-12 w-12"
+          className="h-12 w-12 rounded-full border-4 border-yellow-50"
           src="https://www.fakepersongenerator.com/Face/male/male20151086177407532.jpg"
         />
       </AvatarContainer>
-      <Rating rating={224} />
+      <Rating iconClasses="text-md" rating={224} />
     </div>
     <div>
       <h1 className="text-md text-grey-70">Jordan's Golf Meet Up</h1>
